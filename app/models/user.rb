@@ -3,6 +3,7 @@ class User < ActiveRecord::Base
   attr_accessible :role_ids, :as => :admin
   attr_accessible :provider, :uid, :name, :email
   validates_presence_of :name
+  has_many :designs
 
   def self.create_with_omniauth(auth)
     create! do |user|

@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @design.title %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @design.user %>
+</p>
+
+
+<%= link_to 'Edit', edit_design_path(@design) %> |
+<%= link_to 'Back', designs_path %>
