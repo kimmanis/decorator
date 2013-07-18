@@ -32,3 +32,4 @@ group :test do
   gem 'email_spec'
 end
 gem "paperclip", "~> 3.0"
+gem 'aws-sdk', '~> 1.5.7'

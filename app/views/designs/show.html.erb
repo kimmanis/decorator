@@ -10,6 +10,10 @@
   <%= @design.user %>
 </p>
 
+<p>
+<%= image_tag @design.image.url(:thumb) %>
+</p>
+
 
 <%= link_to 'Edit', edit_design_path(@design) %> |
 <%= link_to 'Back', designs_path %>
