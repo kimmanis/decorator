@@ -11,9 +11,20 @@
 </p>
 
 <p>
-<%= image_tag @design.image.url(:thumb) %>
+	<div id="box">
+		<%= image_tag @design.image.url(:large), :size => "600x600" %>
+	</div>
+	<button id="button">Click me!</button>
 </p>
 
 
 <%= link_to 'Edit', edit_design_path(@design) %> |
 <%= link_to 'Back', designs_path %>
+
+<script type="text/javascript">
+var angle = 0, img = document.getElementById('box');
+document.getElementById('button').onclick = function() {
+    angle = (angle+90)%360;
+    img.className = "rotate"+angle;
+}
+</script>
